@@ -49,7 +49,12 @@ class LoginScreenController: UIViewController {
     }()
     
     override func viewDidLoad() {
+        view.backgroundColor = .white
+        
         super.viewDidLoad()
+        
+        self.navigationController?.isNavigationBarHidden = true
+        
         setupView()
         runSnapKitAutoLayout()
     }
