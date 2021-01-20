@@ -45,6 +45,7 @@ class LoginScreenController: UIViewController {
         button.setTitle("Log in", for: .normal)
         button.setTitleColor(.black, for: .normal)
         button.titleLabel?.font = UIFont(name: "Noteworthy", size: 20.0)
+        button.addTarget(self, action: #selector(loginDidTap), for: .touchUpInside)
         return button
     }()
     
@@ -52,8 +53,7 @@ class LoginScreenController: UIViewController {
         view.backgroundColor = .white
         
         super.viewDidLoad()
-        
-        self.navigationController?.isNavigationBarHidden = true
+        navigationController?.isNavigationBarHidden = true
         
         setupView()
         runSnapKitAutoLayout()
@@ -63,6 +63,11 @@ class LoginScreenController: UIViewController {
         view.addSubview(emailTextField)
         view.addSubview(passwordTextField)
         view.addSubview(loginButton)
+    }
+    
+    @objc private func loginDidTap() {
+        let mapScreenController = MapScreenController()
+        navigationController?.pushViewController(mapScreenController, animated: true)
     }
     
     private func runSnapKitAutoLayout() {

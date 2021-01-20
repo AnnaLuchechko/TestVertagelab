@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		076B0C57125CC75ABA137FF3 /* Pods_TestVertagelab.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 35B49DEBB43FF4A404E7BBD4 /* Pods_TestVertagelab.framework */; };
 		0802C1E125B7A94E0045A92A /* LoginScreenController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0802C1E025B7A94E0045A92A /* LoginScreenController.swift */; };
+		084B522325B7D9CE00DF04C7 /* MapScreenController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 084B522225B7D9CE00DF04C7 /* MapScreenController.swift */; };
 		0869C61925B797BE0014F587 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0869C61825B797BE0014F587 /* AppDelegate.swift */; };
 		0869C61B25B797BE0014F587 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0869C61A25B797BE0014F587 /* SceneDelegate.swift */; };
 		0869C62325B797BE0014F587 /* TestVertagelab.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 0869C62125B797BE0014F587 /* TestVertagelab.xcdatamodeld */; };
@@ -18,6 +19,7 @@
 
 /* Begin PBXFileReference section */
 		0802C1E025B7A94E0045A92A /* LoginScreenController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginScreenController.swift; sourceTree = "<group>"; };
+		084B522225B7D9CE00DF04C7 /* MapScreenController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapScreenController.swift; sourceTree = "<group>"; };
 		0869C61525B797BE0014F587 /* TestVertagelab.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestVertagelab.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0869C61825B797BE0014F587 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0869C61A25B797BE0014F587 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -66,6 +68,7 @@
 				0869C61825B797BE0014F587 /* AppDelegate.swift */,
 				0869C61A25B797BE0014F587 /* SceneDelegate.swift */,
 				0802C1E025B7A94E0045A92A /* LoginScreenController.swift */,
+				084B522225B7D9CE00DF04C7 /* MapScreenController.swift */,
 				0869C62425B797BE0014F587 /* Assets.xcassets */,
 				0869C62625B797BF0014F587 /* LaunchScreen.storyboard */,
 				0869C62925B797BF0014F587 /* Info.plist */,
@@ -103,6 +106,7 @@
 				0869C61225B797BE0014F587 /* Frameworks */,
 				0869C61325B797BE0014F587 /* Resources */,
 				5C2C99CD7B5A94E13748BE30 /* [CP] Embed Pods Frameworks */,
+				EA5B4A46631C2B7A8D7843E7 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -197,6 +201,23 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		EA5B4A46631C2B7A8D7843E7 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TestVertagelab/Pods-TestVertagelab-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TestVertagelab/Pods-TestVertagelab-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-TestVertagelab/Pods-TestVertagelab-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -206,6 +227,7 @@
 			files = (
 				0869C62325B797BE0014F587 /* TestVertagelab.xcdatamodeld in Sources */,
 				0869C61925B797BE0014F587 /* AppDelegate.swift in Sources */,
+				084B522325B7D9CE00DF04C7 /* MapScreenController.swift in Sources */,
 				0802C1E125B7A94E0045A92A /* LoginScreenController.swift in Sources */,
 				0869C61B25B797BE0014F587 /* SceneDelegate.swift in Sources */,
 			);

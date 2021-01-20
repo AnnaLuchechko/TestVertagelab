@@ -6,5 +6,7 @@ target 'TestVertagelab' do
   use_frameworks!
 
  pod 'SnapKit'
+ pod 'GoogleMaps', '4.1.0'
+ pod 'GooglePlaces', '4.1.0'
 
 end
