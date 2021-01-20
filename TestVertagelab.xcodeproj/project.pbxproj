@@ -3,13 +3,14 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		076B0C57125CC75ABA137FF3 /* Pods_TestVertagelab.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 35B49DEBB43FF4A404E7BBD4 /* Pods_TestVertagelab.framework */; };
+		0802C1E125B7A94E0045A92A /* LoginScreenController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0802C1E025B7A94E0045A92A /* LoginScreenController.swift */; };
 		0869C61925B797BE0014F587 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0869C61825B797BE0014F587 /* AppDelegate.swift */; };
 		0869C61B25B797BE0014F587 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0869C61A25B797BE0014F587 /* SceneDelegate.swift */; };
-		0869C61D25B797BE0014F587 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0869C61C25B797BE0014F587 /* ViewController.swift */; };
 		0869C62025B797BE0014F587 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0869C61E25B797BE0014F587 /* Main.storyboard */; };
 		0869C62325B797BE0014F587 /* TestVertagelab.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 0869C62125B797BE0014F587 /* TestVertagelab.xcdatamodeld */; };
 		0869C62525B797BE0014F587 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0869C62425B797BE0014F587 /* Assets.xcassets */; };
@@ -17,15 +18,18 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0802C1E025B7A94E0045A92A /* LoginScreenController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginScreenController.swift; sourceTree = "<group>"; };
 		0869C61525B797BE0014F587 /* TestVertagelab.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestVertagelab.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0869C61825B797BE0014F587 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0869C61A25B797BE0014F587 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		0869C61C25B797BE0014F587 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		0869C61F25B797BE0014F587 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		0869C62225B797BE0014F587 /* TestVertagelab.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = TestVertagelab.xcdatamodel; sourceTree = "<group>"; };
 		0869C62425B797BE0014F587 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0869C62725B797BF0014F587 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0869C62925B797BF0014F587 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2B2B228DBD5C62EDE2CDE71C /* Pods-TestVertagelab.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestVertagelab.release.xcconfig"; path = "Target Support Files/Pods-TestVertagelab/Pods-TestVertagelab.release.xcconfig"; sourceTree = "<group>"; };
+		35B49DEBB43FF4A404E7BBD4 /* Pods_TestVertagelab.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TestVertagelab.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D97C00E72A6E0CDA4948DC02 /* Pods-TestVertagelab.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestVertagelab.debug.xcconfig"; path = "Target Support Files/Pods-TestVertagelab/Pods-TestVertagelab.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,6 +37,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				076B0C57125CC75ABA137FF3 /* Pods_TestVertagelab.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -44,6 +49,8 @@
 			children = (
 				0869C61725B797BE0014F587 /* TestVertagelab */,
 				0869C61625B797BE0014F587 /* Products */,
+				1C57FFD1EE1FA75ECD51D73B /* Pods */,
+				70735017E6A8208669CEEA9F /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -60,7 +67,7 @@
 			children = (
 				0869C61825B797BE0014F587 /* AppDelegate.swift */,
 				0869C61A25B797BE0014F587 /* SceneDelegate.swift */,
-				0869C61C25B797BE0014F587 /* ViewController.swift */,
+				0802C1E025B7A94E0045A92A /* LoginScreenController.swift */,
 				0869C61E25B797BE0014F587 /* Main.storyboard */,
 				0869C62425B797BE0014F587 /* Assets.xcassets */,
 				0869C62625B797BF0014F587 /* LaunchScreen.storyboard */,
@@ -70,6 +77,23 @@
 			path = TestVertagelab;
 			sourceTree = "<group>";
 		};
+		1C57FFD1EE1FA75ECD51D73B /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				D97C00E72A6E0CDA4948DC02 /* Pods-TestVertagelab.debug.xcconfig */,
+				2B2B228DBD5C62EDE2CDE71C /* Pods-TestVertagelab.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		70735017E6A8208669CEEA9F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				35B49DEBB43FF4A404E7BBD4 /* Pods_TestVertagelab.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -77,9 +101,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0869C62C25B797BF0014F587 /* Build configuration list for PBXNativeTarget "TestVertagelab" */;
 			buildPhases = (
+				D60B06CB2BE1731CA7FB3E48 /* [CP] Check Pods Manifest.lock */,
 				0869C61125B797BE0014F587 /* Sources */,
 				0869C61225B797BE0014F587 /* Frameworks */,
 				0869C61325B797BE0014F587 /* Resources */,
+				5C2C99CD7B5A94E13748BE30 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -135,14 +161,56 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		5C2C99CD7B5A94E13748BE30 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TestVertagelab/Pods-TestVertagelab-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TestVertagelab/Pods-TestVertagelab-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-TestVertagelab/Pods-TestVertagelab-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D60B06CB2BE1731CA7FB3E48 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TestVertagelab-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		0869C61125B797BE0014F587 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				0869C62325B797BE0014F587 /* TestVertagelab.xcdatamodeld in Sources */,
-				0869C61D25B797BE0014F587 /* ViewController.swift in Sources */,
 				0869C61925B797BE0014F587 /* AppDelegate.swift in Sources */,
+				0802C1E125B7A94E0045A92A /* LoginScreenController.swift in Sources */,
 				0869C61B25B797BE0014F587 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -287,6 +355,7 @@
 		};
 		0869C62D25B797BF0014F587 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D97C00E72A6E0CDA4948DC02 /* Pods-TestVertagelab.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -306,6 +375,7 @@
 		};
 		0869C62E25B797BF0014F587 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2B2B228DBD5C62EDE2CDE71C /* Pods-TestVertagelab.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
