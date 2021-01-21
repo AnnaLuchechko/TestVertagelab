@@ -52,7 +52,9 @@ class MapScreenController: UIViewController, UITableViewDelegate, UITableViewDat
         setupView()
         runSnapKitAutoLayout()
         
-        PlacesService().getPlaces()
+        PlacesService().getPlaces (completion: { [weak self] (places, error) in
+            print(places)
+        })
     }
     
     private func setupView() {
