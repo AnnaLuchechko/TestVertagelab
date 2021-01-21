@@ -9,7 +9,7 @@ import UIKit
 import SnapKit
 
 class LoginScreenController: UIViewController {
-
+    
     lazy var emailTextField: UITextField = {
         let textField = UITextField()
         textField.placeholder = "Enter email"
@@ -50,13 +50,21 @@ class LoginScreenController: UIViewController {
     }()
     
     override func viewDidLoad() {
-        view.backgroundColor = .white
-        
         super.viewDidLoad()
+
+        view.backgroundColor = .white
         navigationController?.isNavigationBarHidden = true
-        
+            
         setupView()
         runSnapKitAutoLayout()
+    }
+    
+    // Action after loginButton tapped
+    @objc private func loginDidTap() {
+        
+        let mapScreenController = MapScreenController()
+        navigationController?.pushViewController(mapScreenController, animated: true)
+
     }
     
     private func setupView() {
@@ -65,11 +73,7 @@ class LoginScreenController: UIViewController {
         view.addSubview(loginButton)
     }
     
-    @objc private func loginDidTap() {
-        let mapScreenController = MapScreenController()
-        navigationController?.pushViewController(mapScreenController, animated: true)
-    }
-    
+    // Constraints via SnapKit
     private func runSnapKitAutoLayout() {
         emailTextField.snp.makeConstraints { (make) in
             make.width.equalTo(280)

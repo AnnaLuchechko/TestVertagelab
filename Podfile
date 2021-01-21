@@ -8,5 +8,7 @@ target 'TestVertagelab' do
  pod 'SnapKit'
  pod 'GoogleMaps', '4.1.0'
  pod 'GooglePlaces', '4.1.0'
+ pod 'Alamofire', '~> 5.2'
+
 
 end
