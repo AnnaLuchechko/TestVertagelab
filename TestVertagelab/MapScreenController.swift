@@ -49,11 +49,11 @@ class MapScreenController: UIViewController, UITableViewDelegate, UITableViewDat
         
         view.backgroundColor = .white
         navigationController?.isNavigationBarHidden = false
-
         
         setupView()
         runSnapKitAutoLayout()
         
+        // Get places from API
         PlacesService().getPlaces (completion: { [weak self] (places, error) in
             if(error.isEmpty) {
                 self?.placesData = places
@@ -65,16 +65,6 @@ class MapScreenController: UIViewController, UITableViewDelegate, UITableViewDat
         })
     }
     
-    func setTitle(newTitle: String) {
-        emailTextField.text = newTitle
-    }
-    
-    private func setupView() {
-        view.addSubview(googleMapView)
-        view.addSubview(placesTableView)
-        view.addSubview(emailTextField)
-    }
-    
     private func placeMarkers(places: [Places.Place]?) {
         guard let places = places else { return }
         for place in places {
@@ -84,6 +74,36 @@ class MapScreenController: UIViewController, UITableViewDelegate, UITableViewDat
             marker.map = googleMapView
             markers.append(marker)
         }
+    }
+
+    // Set email as emailTextField from LoginScreenController to MapScreenController
+    func setTitle(newTitle: String) {
+        emailTextField.text = newTitle
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if(markers.count >= indexPath.row) {
+            googleMapView.animate(toLocation: markers[indexPath.row].position)
+        } else {
+            print("marker not found")
+        }
+    }
+
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return placesData?.places.count ?? 0
+    }
+
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath as IndexPath)
+        cell.textLabel?.font = UIFont(name: "Noteworthy", size: 20.0)
+        cell.textLabel!.text = "\(indexPath.row + 1). \(placesData?.places[indexPath.row].name ?? "")"
+        return cell
+    }
+    
+    private func setupView() {
+        view.addSubview(googleMapView)
+        view.addSubview(placesTableView)
+        view.addSubview(emailTextField)
     }
     
     // Constraints via SnapKit
@@ -108,31 +128,6 @@ class MapScreenController: UIViewController, UITableViewDelegate, UITableViewDat
             make.top.equalTo(googleMapView.snp.bottom)
             make.centerX.equalTo(view.snp.centerX)
         }
-    }
-    
-    func onLogin(email: String)
-    {
-        print("email: \(email)")
-    }
-    
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        if(markers.count >= indexPath.row) {
-            googleMapView.animate(toLocation: markers[indexPath.row].position)
-        } else {
-            print("marker not found")
-        }
-    }
-    
-
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return placesData?.places.count ?? 0
-    }
-
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath as IndexPath)
-        cell.textLabel?.font = UIFont(name: "Noteworthy", size: 20.0)
-        cell.textLabel!.text = "\(indexPath.row + 1). \(placesData?.places[indexPath.row].name ?? "")"
-        return cell
     }
     
 }
