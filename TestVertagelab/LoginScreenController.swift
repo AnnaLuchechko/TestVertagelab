@@ -61,10 +61,9 @@ class LoginScreenController: UIViewController {
     
     // Action after loginButton tapped
     @objc private func loginDidTap() {
-        
         let mapScreenController = MapScreenController()
+        mapScreenController.setTitle(newTitle: emailTextField.text ?? "not set")
         navigationController?.pushViewController(mapScreenController, animated: true)
-
     }
     
     private func setupView() {

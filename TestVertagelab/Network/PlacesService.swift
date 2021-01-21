@@ -10,20 +10,21 @@ import Alamofire
 
 class PlacesService {
     
-    let url: String = "https://2fjd9l3x1l.api.quickmocker.com/kyiv/places"
+    let url: String = "https://nc0aevq3i3.api.quickmocker.com/kyiv/places"//"https://2fjd9l3x1l.api.quickmocker.com/kyiv/places"
     
     func getPlaces(completion: @escaping (Places?, String) -> Void) {
-        AF.request(url, method: .get, parameters: nil)
-            .responseJSON { response in
-                
+        AF.request(url, method: .get, parameters: nil).responseJSON { response in
             guard let placesData = response.data else {
-                completion(nil, "error")
+                completion(nil, response.error?.localizedDescription ?? "error not localized")
                 return
             }
-                
-            let places = try! JSONDecoder().decode(Places.self, from: placesData)
-            completion(places, "")
             
+            do {
+                let places = try JSONDecoder().decode(Places.self, from: placesData)
+                completion(places, "")
+            } catch {
+                completion(nil, error.localizedDescription)
+            }
         }
     }
 }
